@@ -1,0 +1,53 @@
+<ion-view title="Login" class="loginPage">
+  <ion-content overflow-scroll="true" padding="true" class="has-header">
+
+    <form class="list">
+
+      <div ng-controller="MainController as vm">
+
+        <div >
+
+          <h2>Welcome to</h2>
+          <div class="aboutBG"></div>
+
+          <br/>
+          <br/>
+        <form>
+          <label for="username">Username:</label>
+          <input id="username" ng-model="vm.user.username" >
+          <br />
+          <label for="password">Password:</label>
+          <input id="password" ng-model = 'vm.user.password' >
+          <br />
+          <button ng-click="vm.login(vm.user)">Submit</button>
+        </form>
+
+          <form>
+          <label for="usernameCreate">Username:</label>
+          <input id="usernameCreate" ng-model="vm.user.username" >
+          <br />
+          <label for="passwordCreate">Password:</label>
+          <input id="passwordCreate" ng-model = 'vm.user.password' >
+          <br />
+          <button ng-click="vm.create(vm.user)">Submit</button>
+        </form>
+
+        </div>
+
+        <div>
+
+          <h2>Log in successful!!</h2>
+          <br/>
+          <div class="aboutBG"></div>
+          <br/>
+          <a ui-sref="tabsController.home"><button>Continue</button></a>
+          <br/>
+
+          </div>
+
+      </div>
+
+    </form>
+
+  </ion-content>
+</ion-view>
